@@ -1,8 +1,13 @@
+// Run go mod init internal to initialize the internal module. Then, run go mod
+// tidy to add the dependencies to go.mod. Finally, run go build to build the
+// application.
 package main
 
 import (
 	"os"
 	"strconv"
+	"fmt"
+	"github.com/BigPhatNerd/introductory-go-project/internal"
 )
 
 
