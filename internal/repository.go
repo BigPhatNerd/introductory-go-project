@@ -32,6 +32,10 @@ func (r *PokemonRepository) GetPokemonById(id int) *Pokemon {
 	return nil
 }
 
+func (r *PokemonRepository) AddPokemon(pokemon Pokemon) {
+	r.pokedex = append(r.pokedex, pokemon)
+}
+
 func (r *PokemonRepository) RemovePokemon(id int) {
 	for i, pokemon := range r.pokedex {
 		if pokemon.ID == id {

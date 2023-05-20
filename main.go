@@ -53,7 +53,7 @@ func main(){
 		if err != nil {
 			fmt.Printf("Error adding Pokemon %v\n", err)
 		} else {
-			fmt.Prinln("Pokemon added successfully")
+			fmt.Println("Pokemon added successfully")
 		}
 	case "remove":
 		if len(args) != 3 {
@@ -61,7 +61,7 @@ func main(){
 			os.Exit(1)
 		}
 		id, _ := strconv.Atoi(args[2])
-		err := service.RemovePdokemon(id)
+		err := service.RemovePokemon(id)
 		if err != nil{
 			fmt.Printf("Error removing Pokemon: %v\n", err)
 		} else {
@@ -87,7 +87,7 @@ func main(){
 	//Save the updated Pokedex to file
 	err = internal.SavePokedexToFile("database.json", repo)
 	if err != nil {
-		fmt.Pringf("Error saving Pokedex: %v\n", err)
+		fmt.Printf("Error saving Pokedex: %v\n", err)
 		os.Exit(1)
 	}
 }
